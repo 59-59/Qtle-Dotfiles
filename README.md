@@ -1,2 +1,3 @@
 # Qtle-Dotfiles
-Config Qtile Dotfiles
+![Ejemplo de Imagen](Img/Screenshot.png)
+
