@@ -39,16 +39,23 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
 
+    #Rofi
+    Key([mod], "d", lazy.spawn("launcher.sh")),
+    
     #Lockscreen
     Key([mod], "l", lazy.spawn("dm-tool switch-to-greeter")),
 
-    #Music
-    Key([], "XF86AudioNext", lazy.spawn("mpc next")),
-    Key([], "XF86AudioPrev", lazy.spawn("mpc prev")),
-    Key([], "XF86AudioPlay", lazy.spawn("mpc toggle")),
+    #Audio
+    Key([], "f10", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")), #Boton
+    Key([], "f11", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")), #Boton
+    Key([], "f9", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
+    Key([], "f8", lazy.spawn("playerctl next")),
+    Key([], "f6", lazy.spawn("playerctl previous")),
+    Key([], "f7", lazy.spawn("playerctl play-pause")),
     
     #Screenshot
-    Key([], "Print", lazy.spawn("flameshot")),
+    Key([], "Print", lazy.spawn("flameshot gui")),
+    Key([mod, "shift"] , "s" , lazy.spawn("flameshot gui")),
     
     #terminal
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
