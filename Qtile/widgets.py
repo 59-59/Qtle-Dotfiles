@@ -134,6 +134,19 @@ screens = [
                  widget.Systray(
                     **powerline
                 ),
+                    widget.Battery(
+                    format='{percent:2.0%} {char} ',
+                    update_interval=1,
+                    low_foreground='FF0000',
+                    low_percentage=0.3,
+                    charge_char='󰂄',
+                    discharge_char='󰁾',
+                    empty_char='󰂃',
+                    full_char='󰁹',
+                    not_charging_char='󰂑',
+                    unknown_char='󰂑',
+                    fontsize=16
+                )
             ],
             26,
             margin=10,
