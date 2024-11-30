@@ -54,6 +54,7 @@ screens = [
         top=bar.Bar(
             [   
                 widget.TextBox(
+                    #fmt='<U+F0018> ',
                     fmt='󰄉 ',
                     foreground=[c_white, c_white],
                     fontsize=27,
